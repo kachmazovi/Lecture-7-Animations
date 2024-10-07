@@ -1,0 +1,62 @@
+body {
+    background-image: url(img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.bg-img {
+    background-image: url(https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg);
+    width: 700px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    transition: all 2s linear;
+}
+
+.bg-img:hover {
+    transform: scale(1.2) rotate(30deg);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveCircle 4s linear infinite;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveCircle {
+    25% {
+        left: calc(100% - 100px);
+        top: 0;
+        transform: rotate(-180deg);
+    }
+    50% {
+        left: calc(100% - 100px);
+        top: calc(100vh - 100px);
+        transform: rotate(-360deg);
+    }
+    75% {
+        top: calc(100vh - 100px);
+        left: 0;
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
